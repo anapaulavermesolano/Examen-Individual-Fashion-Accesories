@@ -1,0 +1,53 @@
+* {
+	font-family: 'Raleway', sans-serif;
+}
+header #menu {
+	background: #ccc;
+	.dropdown-menu {
+		li {
+			position: relative;
+		}
+	}
+	button {
+		.btn-default {
+			background: #ccc!important;
+			border: transparent;
+		}
+		.btn-sm {
+			padding: 5px;
+		}
+		ul .dropdown-menu {
+			img.absolute {
+				position: absolute;
+				left: 5px;
+				top: 8px;
+			}
+			li {
+				a{
+					.left {
+						padding-left: 22px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#header1 {
+	padding: 100px 0 50px;
+	.pd {
+		i {
+			font-size: 30px;
+		}
+		p {
+			font-size: 12px;
+		}
+	}
+}
+.display-block{
+	display: inline-block;
+}
+.box-catalogos {
+	width: 400px;
+	margin: auto;
+}

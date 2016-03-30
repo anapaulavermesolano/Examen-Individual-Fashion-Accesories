@@ -1,0 +1,44 @@
+header#menu
+    nav.navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+                    button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+                        span.sr-only toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+
+                    a.navbar-brand.titulo(href="#") 
+                        p Default Welcome Msg!
+
+            .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                ul.nav.navbar-nav.navbar-right
+                    li.btn-group
+                        button.btn.btn-default.btn-sm.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            img.absolute(src="assets/images/flag1.png") 
+                            p.left Lenguage&nbsp;
+                                span.caret
+                        ul.dropdown-menu
+                            li
+                                img.absolute.abs1(src="assets/images/flag2.png")
+                                a.left(href="#") France
+                            li
+                                img.absolute.abs2(src="assets/images/flag1.png")
+                                a.left(href="#") English
+                    li
+                        +btn-group("usd", "Currency")
+                    li
+                        +btn-group("user", "My Account")
+section#header1
+    .container
+        .row.pd
+            .col-sm-4.col-xs-12.relative
+                i.fa.fa-clock-o.absolute &nbsp;OPENING TIME
+                P 9:00AM - 10:00PM
+            .col-sm-4.col-xs-12
+                img.img-responsive(src="assets/images/logo.png")
+            .col-sm-4.col-xs-12
+                form.navbar-form(role="search")
+                    .form-group
+                        input(type="text" class="form-control" placeholder="Search")
+                        i.fa.fa-search

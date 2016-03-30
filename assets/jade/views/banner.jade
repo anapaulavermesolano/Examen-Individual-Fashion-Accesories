@@ -1,0 +1,29 @@
+section#pills
+	nav.navbar.navbar-default
+		.container
+			ul.nav.nav-pills
+				li.active(role="presentation")
+					a(href="#") home
+				li(role="presentation")
+					a(href="#") contact
+				li.pull-right
+					i.fa.fa-shopping-cart My Cart
+					p 2item(s) - $244.00
+section
+	#carousel-example-generic.carousel.slide(data-ride="carousel")
+			ol.carousel-indicators
+				li.active(data-target="#carousel-example-generic" data-slide-to="0")
+				li(data-target="#carousel-example-generic" data-slide-to="1")
+			+slider1("assets/images/slider1.jpg","assets/images/slider1.jpg")
+			a.left.carousel-control(href="#carousel-example-generic" role="button" data-slide="prev")
+				span.glyphicon.glyphicon-chevron-left
+				span.sr-only Previous
+			a.right.carousel-control(href="#carousel-example-generic" role="button" data-slide="next")
+				span.glyphicon.glyphicon-chevron-right
+				span.sr-only next
+	.box-catalogos
+		+catalogos("assets/images/cart-1.jpg","Aliquam Consequat","1 x $500")
+		+catalogos("assets/images/cart-2.jpg","Qulsque In Arcuc","1 x $200")
+		+suttotal("Sub-Total", "$700")
+		+suttotal("Eco Tax (-2.00)", "$7.00")
+		+suttotal("VAT (20%)", "$40.00")

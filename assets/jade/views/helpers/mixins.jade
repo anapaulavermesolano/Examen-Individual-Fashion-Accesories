@@ -1,0 +1,144 @@
+
+mixin btn-group(namefa, name)
+	.btn-group
+		button.btn.btn-default.btn-sm.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+			p
+				i(class='fa fa-'+namefa) &nbsp;
+				= name 
+				span.caret
+		ul.dropdown-menu
+			li
+				a(href="#") France
+			li
+				a(href="#") English
+
+mixin slider1(imgslider,imgslider2)
+	.carousel-inner(role="listbox")
+		.item.active
+			img(src="#{imgslider}")
+			.caorusel-caption
+				h1 AUTUMN/WINTER LOOKBOOK
+				p - 2016 COLLECTION -
+		.item
+			img(src="#{imgslider2}")
+			.caorusel-caption
+				h1 AUTUMN/WINTER LOOKBOOK
+				p - 2016 COLLECTION -
+
+mixin catalogos(originalLink, name, dolar)
+	.media
+		.media-left
+			a(href="#")
+				img.media-object(src="#{originalLink}")
+		.media-body
+			h4.media-heading= name
+			p.dolar= dolar
+				i.fa.fa-times
+mixin suttotal(subname, subdolar)
+	.row
+		.col-xs-6
+			p.subname= subname
+		.col-xs-6
+			p.subdolar= subdolar
+mixin latestimg(latestimg)
+	case latestimg
+		when "img1"
+			img.img-responsive(src="assets/images/a1.jpg")
+		when "img2"
+			img.img-responsive(src="assets/images/b1.jpg")
+		when "img3"
+			img.img-responsive(src="assets/images/c1.jpg")
+		when "img4"
+			img.img-responsive(src="assets/images/d1.jpg")
+mixin botonnew()
+	button.new NEW
+mixin botonsalenew()
+	button.sale SALE
+	button.new NEW
+mixin botonsale()
+	button.sale SALE
+//-fa fa-chevron-up
+mixin stars()
+	p Deliver Wide
+	i.fa.fa-star
+	i.fa.fa-star
+	i.fa.fa-star
+	i.fa.fa-star-o
+	i.fa.fa-star-o
+mixin money()
+	p.subdolar $218.00
+mixin moneytwo()
+	p
+		s.display-block $242.00
+	p.subdolar.display-block $218.00
+
+mixin clothingimg(clothingimg)
+	case clothingimg
+		when "imga"
+			+botonsalenew()
+			img.img-responsive.img-thumbnail(src="assets/images/a2.jpg")
+		when "imgb"
+			+botonnew()
+			img.img-responsive.img-thumbnail(src="assets/images/d2.jpg")
+		when "imgc"
+			img.img-responsive.img-thumbnail(src="assets/images/g2.jpg")
+		when "imgd"
+			+botonnew()
+			img.img-responsive.img-thumbnail(src="assets/images/c2.jpg")
+		when "imge"
+			+botonsale()
+			img.img-responsive.img-thumbnail(src="assets/images/f2.jpg")
+		when "imgf"
+			+botonnew()
+			img.img-responsive.img-thumbnail(src="assets/images/e2.jpg")
+
+mixin clothing(clothingimg)
+	.col-md-4.col-sm-12
+		.row
+			.col-xs-6
+				+clothingimg(clothingimg)
+			.col-xs-6
+				p Deliver Wide
+				+money()
+				i.fa.fa-star
+				i.fa.fa-star
+				i.fa.fa-star
+				i.fa.fa-star-o
+				i.fa.fa-star-o
+				p
+				button
+					i.fa.fa-shopping-cart Add to cart
+
+mixin clothing2(clothingimg)
+	.col-md-4.col-sm-12
+		.row
+			.col-xs-6
+				+clothingimg(clothingimg)
+			.col-xs-6
+				p Deliver Wide
+				+moneytwo()
+				i.fa.fa-star
+				i.fa.fa-star
+				i.fa.fa-star
+				i.fa.fa-star-o
+				i.fa.fa-star-o
+				p
+				button
+					i.fa.fa-shopping-cart Add to cart
+mixin blog(blog)
+	case blog
+		when "blogimg1"
+			img.img-responsive(src="assets/images/blog2.jpg")
+		when "blogimg2"
+			img.img-responsive(src="assets/images/blog1.jpg")
+		when "blogimg3"
+			img.img-responsive(src="assets/images/blog2.jpg")
+		when "blogimg4"
+			img.img-responsive(src="assets/images/blog3.jpg")
+mixin textblog(blog)
+	.col-md-3.col-sm-2.col-xs-12
+		+blog(blog)
+		h4 THE SAMPLE HEADING TITLE
+		p.fecha 27/11/2015
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do...
+		a(href="#") Read more...

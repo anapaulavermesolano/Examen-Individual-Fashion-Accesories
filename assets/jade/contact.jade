@@ -1,0 +1,32 @@
+include views/helpers/mixins
+include views/helpers/variables
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Fashion-Accesories
+        meta(name='viewport',content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='assets/css/main.css')
+        link(href="assets/css/bootstrap.min.css" rel="stylesheet")
+        link(rel='stylesheet', href='assets/font-awesome/css/font-awesome.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css')
+    body
+        include views/header
+		section#bannercontact
+			.container
+				.row
+					.col-sm-6.col-xs-12
+						h1 CONTACT US
+					.col-sm-6.col-xs-12
+						h6 Contact info
+						p phone: 0(1234)567890
+						p Mail: Info@roadthemes.com
+						p Address: No 40 Baria Street 133/2 New York City, NY, United States.
+		section#map
+			.container
+				.row
+					.col-sm-6
+						img
+		include views/footer
+        		script(src="assets/js/jquery.js")
+        		script(type="text/javascript" src="assets/js/bootstrap.min.js")
